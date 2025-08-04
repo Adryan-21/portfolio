@@ -2,112 +2,233 @@
 // Portfolio/Projects section component
 ---
 
-<section id="projects" class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
+<section id="projects" class="relative py-20 bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0">
+    <!-- Animated gradient orbs -->
+    <div class="absolute top-20 right-10 w-80 h-80 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob opacity-30"></div>
+    <div class="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000 opacity-25"></div>
+    <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-indigo-400 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000 opacity-25"></div>
+    
+    <!-- Geometric patterns -->
+    <div class="absolute top-32 right-1/4 w-24 h-24 opacity-20">
+      <div class="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-600 transform rotate-45 rounded-lg animate-float-slow"></div>
+    </div>
+    <div class="absolute bottom-32 left-1/4 w-20 h-20 opacity-20">
+      <div class="w-full h-full bg-gradient-to-br from-purple-500 to-pink-600 rounded-full animate-pulse-gentle animation-delay-2000"></div>
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
     <!-- Section Header -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Moje <span class="text-blue-600">Projekty</span>
+    <div class="text-center mb-16 animate-fade-in">
+      <!-- Badge -->
+      <div class="inline-flex items-center px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-blue-200 shadow-sm mb-6">
+        <svg class="w-4 h-4 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span class="text-sm font-medium text-gray-700">Realizacje i Case Study</span>
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+        Wybrane 
+        <span class="relative inline-block">
+          <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Projekty</span>
+          <svg class="absolute -bottom-2 left-0 w-full h-3 text-blue-300" viewBox="0 0 100 12" fill="currentColor" preserveAspectRatio="none">
+            <path d="M0,8 Q25,2 50,6 T100,4 L100,12 L0,12 Z" opacity="0.6"/>
+          </svg>
+        </span>
       </h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Oto wybrane projekty, które stworzyłem dla klientów. Każdy z nich łączy nowoczesny design z funkcjonalnością.
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Każdy projekt to unikalne wyzwanie. Oto kilka przykładów, które pokazują moje podejście do 
+        <span class="font-semibold text-blue-700">rozwiązywania problemów biznesowych</span> poprzez kod.
       </p>
     </div>
 
     <!-- Projects Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
       
-      <!-- Project Card 1 -->
-      <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-        <div class="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-          <div class="text-white text-center">
-            <svg class="w-16 h-16 mx-auto mb-2 opacity-80" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-            <span class="text-sm font-medium">E-commerce Platform</span>
+      <!-- Project Card 1 - Featured -->
+      <div class="lg:col-span-2 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-white/50">
+        <div class="relative h-64 md:h-80 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 flex items-center justify-center overflow-hidden">
+          <!-- Project preview mockup -->
+          <div class="absolute inset-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/30 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+            <div class="text-white text-center">
+              <svg class="w-20 h-20 mx-auto mb-4 opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+              <div class="text-lg font-bold mb-2">E-commerce Platform</div>
+              <div class="text-sm opacity-80">Kompleksowa platforma sprzedażowa</div>
+            </div>
           </div>
-          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+          <!-- Status badge -->
+          <div class="absolute top-6 right-6">
+            <span class="px-3 py-1 bg-green-500/90 text-white text-xs font-bold rounded-full backdrop-blur-sm">
+              🚀 Live
+            </span>
+          </div>
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500"></div>
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Sklep Internetowy</h3>
-          <p class="text-gray-600 mb-4 text-sm">
-            Nowoczesna platforma e-commerce z systemem płatności, zarządzaniem produktami i responsywnym designem.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Vue.js</span>
-            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">Tailwind</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">API</span>
+        <div class="p-8">
+          <div class="flex items-start justify-between mb-4">
+            <h3 class="text-2xl font-bold text-gray-900">Sklep Internetowy Premium</h3>
+            <div class="flex gap-2">
+              <span class="text-yellow-500">⭐</span>
+              <span class="text-sm text-gray-600 font-medium">Projekt wyróżniony</span>
+            </div>
           </div>
-          <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium">
-              Zobacz Live
+          <p class="text-gray-600 mb-6 text-base leading-relaxed">
+            Nowoczesna platforma e-commerce z zaawansowanym systemem płatności, zarządzaniem produktami, 
+            AI-powered rekomendacjami i pełnym responsywnym designem. <strong>Wzrost konwersji o 340%</strong> 
+            w porównaniu do poprzedniej wersji.
+          </p>
+          
+          <!-- Key features -->
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="flex items-center text-sm text-gray-700">
+              <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Płatności Stripe/PayPal
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Panel administracyjny
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              SEO & Analytics
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Mobilny first design
+            </div>
+          </div>
+          
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">Vue.js 3</span>
+            <span class="px-4 py-2 bg-green-100 text-green-800 text-sm font-semibold rounded-full">Tailwind CSS</span>
+            <span class="px-4 py-2 bg-purple-100 text-purple-800 text-sm font-semibold rounded-full">Node.js API</span>
+            <span class="px-4 py-2 bg-orange-100 text-orange-800 text-sm font-semibold rounded-full">PostgreSQL</span>
+          </div>
+          <div class="flex gap-4">
+            <a href="#" class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-3 px-6 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              🔗 Zobacz Live Demo
             </a>
-            <a href="#" class="flex-1 border border-gray-300 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-sm font-medium">
-              Kod
+            <a href="#" class="flex-1 border-2 border-gray-300 text-gray-700 text-center py-3 px-6 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 font-semibold">
+              📋 Case Study
             </a>
           </div>
         </div>
       </div>
 
       <!-- Project Card 2 -->
-      <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-        <div class="relative h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
-          <div class="text-white text-center">
-            <svg class="w-16 h-16 mx-auto mb-2 opacity-80" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-            </svg>
-            <span class="text-sm font-medium">Business Dashboard</span>
+      <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden group border border-white/50">
+        <div class="relative h-56 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/30 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+            <div class="text-white text-center">
+              <svg class="w-16 h-16 mx-auto mb-3 opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+              </svg>
+              <div class="text-base font-bold">Business Dashboard</div>
+            </div>
           </div>
-          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+          <div class="absolute top-4 right-4">
+            <span class="px-2 py-1 bg-blue-500/90 text-white text-xs font-bold rounded-full">
+              📊 Analytics
+            </span>
+          </div>
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500"></div>
         </div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Dashboard Analityczny</h3>
-          <p class="text-gray-600 mb-4 text-sm">
-            Interaktywny dashboard do analizy danych biznesowych z wykresami i raportami w czasie rzeczywistym.
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Dashboard Analityczny</h3>
+          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+            Zaawansowany dashboard do analizy danych biznesowych z interaktywnymi wykresami, 
+            raportami w czasie rzeczywistym i systemem alertów.
           </p>
+          
+          <!-- Metrics -->
+          <div class="grid grid-cols-2 gap-3 mb-4 text-xs">
+            <div class="bg-gray-50 rounded-lg p-2 text-center">
+              <div class="font-bold text-green-600">99.9%</div>
+              <div class="text-gray-600">Uptime</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-2 text-center">
+              <div class="font-bold text-blue-600">2.3s</div>
+              <div class="text-gray-600">Load time</div>
+            </div>
+          </div>
+          
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">Vue.js</span>
-            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-medium rounded-full">Chart.js</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">TypeScript</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">React</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full">Chart.js</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">TypeScript</span>
           </div>
           <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium">
-              Zobacz Live
+            <a href="#" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-center py-2.5 px-4 rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-sm font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+              🔗 Demo
             </a>
-            <a href="#" class="flex-1 border border-gray-300 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-sm font-medium">
-              Kod
+            <a href="#" class="flex-1 border-2 border-gray-300 text-gray-700 text-center py-2.5 px-4 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 text-sm font-semibold">
+              📝 Study
             </a>
           </div>
         </div>
       </div>
 
       <!-- Project Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-        <div class="relative h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
-          <div class="text-white text-center">
-            <svg class="w-16 h-16 mx-auto mb-2 opacity-80" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
-            <span class="text-sm font-medium">SaaS Application</span>
+      <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden group border border-white/50">
+        <div class="relative h-56 bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/30 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+            <div class="text-white text-center">
+              <svg class="w-16 h-16 mx-auto mb-3 opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <div class="text-base font-bold">SaaS Application</div>
+            </div>
           </div>
-          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+          <div class="absolute top-4 right-4">
+            <span class="px-2 py-1 bg-purple-500/90 text-white text-xs font-bold rounded-full">
+              🚀 SaaS
+            </span>
+          </div>
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-500"></div>
         </div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Aplikacja SaaS</h3>
-          <p class="text-gray-600 mb-4 text-sm">
-            Kompleksowa aplikacja do zarządzania projektami z systemem powiadomień i współpracy zespołowej.
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Aplikacja SaaS</h3>
+          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+            Kompleksowa aplikacja do zarządzania projektami z systemem powiadomień, 
+            współpracą zespołową i integracja z popularnymi narzędziami.
           </p>
+          
+          <!-- Metrics -->
+          <div class="grid grid-cols-2 gap-3 mb-4 text-xs">
+            <div class="bg-gray-50 rounded-lg p-2 text-center">
+              <div class="font-bold text-purple-600">500+</div>
+              <div class="text-gray-600">Użytkowników</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-2 text-center">
+              <div class="font-bold text-rose-600">4.8★</div>
+              <div class="text-gray-600">Rating</div>
+            </div>
+          </div>
+          
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full">Astro</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Tailwind</span>
-            <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">Node.js</span>
+            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">Astro</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">Tailwind</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">Node.js</span>
           </div>
           <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium">
-              Zobacz Live
+            <a href="#" class="flex-1 bg-gradient-to-r from-rose-600 to-pink-600 text-white text-center py-2.5 px-4 rounded-lg hover:from-rose-700 hover:to-pink-700 transition-all duration-300 text-sm font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+              🔗 Demo
             </a>
-            <a href="#" class="flex-1 border border-gray-300 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-sm font-medium">
-              Kod
+            <a href="#" class="flex-1 border-2 border-gray-300 text-gray-700 text-center py-2.5 px-4 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 text-sm font-semibold">
+              📝 Study
             </a>
           </div>
         </div>
@@ -115,12 +236,149 @@
 
     </div>
 
-    <!-- CTA Section -->
-    <div class="text-center mt-12">
-      <p class="text-gray-600 mb-6">Chcesz zobaczyć więcej projektów?</p>
-      <a href="#contact" class="inline-block px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400">
-        Skontaktuj się ze mną
-      </a>
+    <!-- Additional Projects Section -->
+    <div class="text-center mb-12">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">Inne realizacje</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Mini project 1 -->
+        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 hover:shadow-lg transition-all duration-300 group">
+          <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Landing Page Medyczny</h4>
+          <p class="text-sm text-gray-600 mb-3">Strona kliniki z systemem rezerwacji wizyt</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Next.js</span>
+            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Framer</span>
+          </div>
+        </div>
+        
+        <!-- Mini project 2 -->
+        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 hover:shadow-lg transition-all duration-300 group">
+          <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM7.5 13.5c0-1.25.75-2.25 1.75-2.25S11 12.25 11 13.5 10.25 15.75 9.25 15.75 7.5 14.75 7.5 13.5z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">API Mikrousług</h4>
+          <p class="text-sm text-gray-600 mb-3">Architektura mikrousług dla aplikacji fintech</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Node.js</span>
+            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Docker</span>
+          </div>
+        </div>
+        
+        <!-- Mini project 3 -->
+        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 hover:shadow-lg transition-all duration-300 group">
+          <div class="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+            </svg>
+          </div>
+          <h4 class="font-bold text-gray-900 mb-2">Kalender Wydarzeń</h4>
+          <p class="text-sm text-gray-600 mb-3">PWA z synchronizacją Google Calendar</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">PWA</span>
+            <span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full">Vue.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced CTA Section -->
+    <div class="text-center">
+      <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/50 shadow-xl">
+        <div class="mb-6">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">
+            Chcesz mieć taki <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">projekt</span>?
+          </h3>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+            Każdy projekt zaczyna się od dobrej rozmowy. Opowiedz mi o swoich potrzebach, 
+            a ja pomogę Ci stworzyć rozwiązanie, które <strong>sprzeda Twój biznes</strong>.
+          </p>
+        </div>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-2xl font-bold text-blue-600 mb-1">50+</div>
+            <div class="text-sm text-gray-600">Zadowolonych klientów</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-green-600 mb-1">2-4 tyg</div>
+            <div class="text-sm text-gray-600">Średni czas realizacji</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-purple-600 mb-1">24/7</div>
+            <div class="text-sm text-gray-600">Wsparcie techniczne</div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl shadow-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Skontaktuj się ze mną
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-bold rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            Zobacz usługi
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-gentle {
+    animation: pulse-gentle 4s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+  
+  @keyframes pulse-gentle {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
