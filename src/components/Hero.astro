@@ -11,7 +11,7 @@ import logo from "../assets/astro.svg";
     <div class="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-10 min-h-[80vh] lg:min-h-[70vh]">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-20 2xl:px-4 flex flex-col-reverse lg:flex-row items-center 2xl:gap-10 min-h-[80vh] lg:min-h-[70vh]">
     <!-- Text Section -->
     <div class="flex-1 text-center lg:text-left space-y-6 animate-fade-in">
       <!-- Badge -->
@@ -105,7 +105,15 @@ import logo from "../assets/astro.svg";
     </div>
   </div>
 
-  <!-- Scroll indicator usunięty -->
+  <!-- Scroll indicator -->
+  <div class="absolute left-1/2 bottom-2 -translate-x-1/2 flex flex-col items-center animate-fade-in z-20 pointer-events-none sm:pointer-events-auto sm:flex">
+    <span class="text-xs md:text-sm text-gray-500 mb-2">Przewiń stronę</span>
+    <div class="w-8 h-8 flex items-center justify-center">
+      <svg class="animate-bounce-slow text-blue-500" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 8v16M16 24l-6-6M16 24l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
 </section>
 <style>
 /* Keyframe animations */
@@ -283,6 +291,15 @@ import logo from "../assets/astro.svg";
   }
   .hero-section {
     padding-top: 1.5rem !important;
+  }
+  .hero-section .absolute.left-1\/2 {
+    bottom: 0.5rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .absolute.left-1\/2 {
+    display: none !important;
   }
 }
 
