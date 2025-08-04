@@ -3,17 +3,17 @@ import { Image } from "astro:assets";
 import logo from "../assets/astro.svg";
 ---
 
-<section class="relative w-full min-h-screen py-16 pt-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden">
+<section class="hero-section relative w-full min-h-screen pt-24 sm:pb-10 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden">
   <!-- Background decoration -->
-  <div class="absolute inset-0 opacity-5">
+  <div class="absolute inset-0 opacity-5 hidden md:block">
     <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
     <div class="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
     <div class="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-16 min-h-[80vh] lg:min-h-[70vh]">
+  <div class="relative max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-10 min-h-[80vh] lg:min-h-[70vh]">
     <!-- Text Section -->
-    <div class="flex-1 text-center lg:text-left space-y-8 animate-fade-in">
+    <div class="flex-1 text-center lg:text-left space-y-6 animate-fade-in">
       <!-- Badge -->
       <div class="inline-flex items-center px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-blue-200 shadow-sm animate-bounce-in">
         <span class="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></span>
@@ -21,7 +21,7 @@ import logo from "../assets/astro.svg";
       </div>
 
       <!-- Main Heading -->
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight">
         Tworzę 
         <span class="relative inline-block">
           <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">strony</span>
@@ -34,7 +34,7 @@ import logo from "../assets/astro.svg";
       </h1>
 
       <!-- Subtitle -->
-      <p class="text-xl md:text-2xl text-gray-600 max-w-2xl leading-relaxed animate-slide-up">
+      <p class="text-base sm:text-lg md:text-2xl text-gray-600 max-w-2xl leading-relaxed animate-slide-up">
         Frontend Developer specjalizujący się w 
         <span class="font-bold text-blue-700 relative">
           React & Vue.js
@@ -44,7 +44,7 @@ import logo from "../assets/astro.svg";
       </p>
 
       <!-- Stats -->
-      <div class="flex flex-wrap justify-center lg:justify-start gap-8 text-center animate-slide-up animation-delay-200">
+      <div class="flex flex-wrap justify-center lg:justify-start gap-6 text-center animate-slide-up animation-delay-200">
         <div class="space-y-1">
           <div class="text-3xl font-bold text-blue-600">50+</div>
           <div class="text-sm text-gray-600">Projektów</div>
@@ -60,7 +60,7 @@ import logo from "../assets/astro.svg";
       </div>
 
       <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-bounce-in animation-delay-300">
+      <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-bounce-in animation-delay-300">
         <a 
           href="#projects" 
           class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400/50"
@@ -85,37 +85,27 @@ import logo from "../assets/astro.svg";
     </div>
 
     <!-- Image Section -->
-    <div class="flex-1 flex justify-center lg:justify-end mb-8 lg:mb-0">
+    <div class="flex-1 flex justify-center lg:justify-end mb-6 lg:mb-0">
       <div class="relative">
-        <!-- Glowing effect -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-3xl opacity-20 scale-110 animate-pulse"></div>
-        
+        <!-- Glowing effect (ukryty na mobile) -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-3xl opacity-20 scale-110 animate-pulse hidden sm:block"></div>
         <!-- Main image -->
-        <div class="relative z-10 p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 shadow-2xl animate-float">
+        <div class="relative z-10 p-4 sm:p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 shadow-2xl animate-float hidden md:block" style="margin-top:2rem;">
           <Image 
             src={logo} 
             alt="Adrian - Frontend Developer" 
-            class="w-48 md:w-64 lg:w-72 drop-shadow-2xl" 
+            class="w-32 sm:w-48 md:w-64 lg:w-72 drop-shadow-2xl" 
           />
         </div>
-        
-        <!-- Floating elements -->
-        <div class="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-2xl opacity-80 animate-bounce-slow"></div>
-        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-purple-500 rounded-full opacity-60 animate-bounce-slow animation-delay-1000"></div>
-        <div class="absolute top-1/2 -right-8 w-12 h-12 bg-indigo-400 rounded-lg opacity-70 animate-bounce-slow animation-delay-2000"></div>
+        <!-- Floating elements (ukryte na mobile) -->
+        <div class="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-2xl opacity-80 animate-bounce-slow hidden sm:block"></div>
+        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-purple-500 rounded-full opacity-60 animate-bounce-slow animation-delay-1000 hidden sm:block"></div>
+        <div class="absolute top-1/2 -right-8 w-12 h-12 bg-indigo-400 rounded-lg opacity-70 animate-bounce-slow animation-delay-2000 hidden sm:block"></div>
       </div>
     </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <a href="#about" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors">
-      <span class="text-sm mb-2">Przewiń w dół</span>
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </a>
-  </div>
+  <!-- Scroll indicator usunięty -->
 </section>
 <style>
 /* Keyframe animations */
@@ -274,6 +264,25 @@ import logo from "../assets/astro.svg";
 @media (max-width: 768px) {
   .animate-blob {
     display: none;
+  }
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  .text-xl, .md\:text-2xl {
+    font-size: 1rem !important;
+  }
+  .w-48 {
+    width: 8rem !important;
+  }
+  .p-8 {
+    padding: 1rem !important;
+  }
+  .gap-8 {
+    gap: 1rem !important;
+  }
+  .hero-section {
+    padding-top: 1.5rem !important;
   }
 }
 
