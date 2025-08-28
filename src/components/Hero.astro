@@ -4,38 +4,29 @@ import logo from "../assets/astro.svg";
 ---
 
 <section 
-  class="hero-section relative w-full min-h-screen pt-20 sm:pt-24 pb-8 sm:pb-10 overflow-hidden transition-colors duration-300"
+  class="hero-section relative w-full h-screen pt-16 sm:pt-20 pb-8 sm:pb-10 overflow-hidden transition-colors duration-300 flex items-center"
   role="banner"
   aria-label="Sekcja główna - Frontend Developer Adrian"
 >
   <!-- Enhanced gradient background with better performance -->
-  <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100"></div>
   
   <!-- Grid pattern overlay for texture -->
-  <div class="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" style="background-image: radial-gradient(circle at 1px 1px, #000 1px, transparent 0); background-size: 40px 40px;"></div>
+  <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 1px 1px, #000 1px, transparent 0); background-size: 40px 40px;"></div>
   <!-- Enhanced background decoration with better performance -->
   <div class="absolute inset-0 opacity-5 hidden md:block will-change-transform">
     <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
     <div class="absolute top-40 right-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+    <div class="absolute bottom-3 left-20 w-72 h-72 bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-4 flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 2xl:gap-16 min-h-[80vh] lg:min-h-[70vh]">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-4 flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-12 2xl:gap-16 h-full">
     <!-- Enhanced Text Section -->
-    <div class="flex-1 text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
-      <!-- Improved availability badge with urgency -->
-      <div 
-        class="inline-flex items-center px-4 py-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-full border border-blue-200/50 dark:border-blue-400/30 shadow-lg shadow-blue-500/10 animate-bounce-in hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default"
-        role="status"
-        aria-label="Status dostępności"
-      >
-        <span class="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse shadow-sm shadow-green-500/50"></span>
-        <span class="text-sm font-medium text-gray-700 dark:text-gray-200">🚀 Tylko 2 miejsca w tym miesiącu</span>
-      </div>
-
+    <div class="flex-1 text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in max-w-2xl lg:max-w-none">
+      
       <!-- Enhanced main heading with stronger value proposition -->
       <h1 
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white leading-[1.1] tracking-tight space-y-2"
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight space-y-2"
         role="heading"
         aria-level="1"
       >
@@ -44,7 +35,7 @@ import logo from "../assets/astro.svg";
             odwiedziny
           </span>
           <svg 
-            class="absolute -bottom-2 left-0 w-full h-3 text-blue-300 dark:text-blue-400 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+            class="absolute -bottom-2 left-0 w-full h-3 text-blue-300 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
             viewBox="0 0 100 12" 
             fill="currentColor" 
             preserveAspectRatio="none"
@@ -59,33 +50,33 @@ import logo from "../assets/astro.svg";
       </h1>
 
       <!-- Enhanced subtitle with concrete value proposition -->
-      <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed animate-slide-up">
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-slide-up">
         Tworzę 
-        <span class="font-bold text-blue-700 dark:text-blue-400 relative group">
-          strony internetowe
-          <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-300 dark:bg-blue-500 group-hover:h-1 transition-all duration-300"></span>
+        <span class="font-bold text-blue-700 relative group">
+          strony internetowe i landing page'y
+          <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-300 group-hover:h-1 transition-all duration-300"></span>
         </span> 
-      , które pomagają firmom zwiększyć sprzedaż o 40-80%. 
-        Łączę nowoczesny design z psychologią sprzedaży i sprawdzonymi technikami konwersji.
+        z użyciem Vue, HTML, Tailwind CSS i Figma. 
+        Łączę 4-letnie doświadczenie z kreatywnością i pasją do kodowania.
       </p>
 
-      <!-- Enhanced stats with more credible and specific numbers -->
+      <!-- Enhanced stats with engaging and universal metrics -->
       <div 
         class="flex flex-wrap justify-center lg:justify-start gap-6 lg:gap-8 text-center animate-slide-up animation-delay-200"
         role="region"
         aria-label="Statystyki osiągnięć"
       >
         <div class="group cursor-default hover:scale-105 transition-transform duration-300">
-          <div class="text-3xl lg:text-4xl font-bold text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">127+</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 font-medium">Projektów</div>
+          <div class="text-3xl lg:text-4xl font-bold text-blue-600 group-hover:text-blue-700 transition-colors duration-300">100%</div>
+          <div class="text-sm text-gray-600 font-medium">Zaangażowania</div>
         </div>
         <div class="group cursor-default hover:scale-105 transition-transform duration-300">
-          <div class="text-3xl lg:text-4xl font-bold text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors duration-300">5+</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 font-medium">Lat doświadczenia</div>
+          <div class="text-3xl lg:text-4xl font-bold text-purple-600 group-hover:text-purple-700 transition-colors duration-300">4+</div>
+          <div class="text-sm text-gray-600 font-medium">Lat jako Frontend Dev</div>
         </div>
         <div class="group cursor-default hover:scale-105 transition-transform duration-300">
-          <div class="text-3xl lg:text-4xl font-bold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors duration-300">2.8M+</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 font-medium">Wygenerowane PLN</div>
+          <div class="text-3xl lg:text-4xl font-bold text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300">24/7</div>
+          <div class="text-sm text-gray-600 font-medium">Wsparcie</div>
         </div>
       </div>
 
@@ -97,51 +88,82 @@ import logo from "../assets/astro.svg";
       >
         <a 
           href="#projects" 
-          class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl focus:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400/50 dark:focus:ring-blue-500/50 overflow-hidden"
+          class="group relative inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl focus:shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-400/50 overflow-hidden hover-lift transform"
           aria-label="Zobacz przykłady stron internetowych"
         >
-          <span class="relative z-10 transition-transform duration-300 group-hover:translate-x-1">Zobacz strony</span>
-          <svg 
-            class="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div class="absolute inset-0 bg-white/20 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
+          <!-- Animated background layer -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Shimmer effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 ease-out skew-x-12"></div>
+          
+          <!-- Ripple effect -->
+          <div class="absolute inset-0 rounded-2xl border border-white/30 scale-100 group-hover:scale-110 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
+          
+          <span class="relative z-10 transition-transform duration-300 group-hover:translate-x-1 flex items-center">
+            Zobacz portfolio
+            <svg 
+              class="ml-3 w-6 h-6 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </span>
+          
+          <!-- Pulse effect on hover -->
+          <div class="absolute inset-0 rounded-2xl bg-white/10 scale-0 group-hover:scale-100 group-hover:animate-ping opacity-75 transition-all duration-300"></div>
         </a>
         
         <a 
           href="#contact" 
-          class="group inline-flex items-center justify-center px-8 py-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md text-gray-800 dark:text-gray-200 font-semibold rounded-xl border-2 border-gray-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-gray-400/50 dark:focus:ring-gray-500/50"
+          class="group relative inline-flex items-center justify-center px-10 py-5 bg-white/95 backdrop-blur-lg text-gray-800 font-bold rounded-2xl border-2 border-gray-200/80 shadow-xl hover:shadow-2xl hover:bg-white transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-indigo-400/50 hover-lift transform overflow-hidden"
           aria-label="Umów bezpłatną konsultację"
         >
-          <svg 
-            class="mr-2 w-5 h-5 transition-transform duration-300 group-hover:scale-110" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <span class="transition-transform duration-300 group-hover:translate-x-1">Bezpłatna konsultacja</span>
+          <!-- Gradient border effect -->
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+            <div class="w-full h-full bg-white rounded-2xl"></div>
+          </div>
+          
+          <!-- Hover background -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-50 via-purple-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+          
+          <!-- Icon with enhanced animation -->
+          <div class="relative z-10 flex items-center">
+            <div class="relative mr-3">
+              <svg 
+                class="w-6 h-6 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              </svg>
+              <!-- Notification dot -->
+              <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
+            </div>
+            
+            <span class="transition-all duration-300 group-hover:translate-x-1 bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-purple-700">
+              Bezpłatna konsultacja
+            </span>
+          </div>
+          
         </a>
       </div>
     </div>
 
     <!-- Enhanced Image Section -->
-    <div class="flex-1 flex justify-center lg:justify-end mb-8 lg:mb-0">
-      <div class="relative group">
-        <!-- Enhanced glowing effect with dark mode support -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 rounded-full blur-3xl opacity-20 dark:opacity-30 scale-110 animate-pulse-glow hidden sm:block group-hover:scale-125 transition-transform duration-700"></div>
+    <div class="flex-1 flex justify-center items-center lg:justify-end mb-8 lg:mb-0">
+      <div class="relative group transform hover:scale-105 transition-transform duration-500">
+        <!-- Enhanced glowing effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 rounded-full blur-3xl opacity-20 scale-110 animate-pulse-glow hidden sm:block group-hover:scale-125 transition-transform duration-700"></div>
         
         <!-- Main image container with improved styling -->
         <div 
-          class="relative z-10 p-6 sm:p-8 bg-white/20 dark:bg-slate-800/20 backdrop-blur-md rounded-3xl border border-white/30 dark:border-slate-600/30 shadow-2xl animate-float hidden md:block group-hover:scale-105 transition-all duration-500" 
+          class="relative z-10 p-6 sm:p-8 bg-white/20 backdrop-blur-md rounded-3xl border border-white/30 shadow-2xl animate-float hidden md:block group-hover:scale-105 transition-all duration-500" 
           style="margin-top:2rem;"
           role="img"
           aria-label="Adrian - twórca stron internetowych"
@@ -169,25 +191,25 @@ import logo from "../assets/astro.svg";
 
   <!-- Enhanced scroll indicator with better accessibility -->
   <div 
-    class="absolute left-1/2 bottom-4 -translate-x-1/2 flex flex-col items-center animate-fade-in z-20 group cursor-pointer"
+    class="absolute left-1/2 bottom-6 -translate-x-1/2 flex flex-col items-center animate-fade-in z-20 group cursor-pointer"
     role="button"
     tabindex="0"
     aria-label="Zobacz przykłady stron internetowych"
-    onclick="document.querySelector('#about, #projects, main > section:nth-child(2)')?.scrollIntoView({ behavior: 'smooth' })"
-    onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); document.querySelector('#about, #projects, main > section:nth-child(2)')?.scrollIntoView({ behavior: 'smooth' }); }"
+    onclick="document.querySelector('#projects, #about, main > section:nth-child(2)')?.scrollIntoView({ behavior: 'smooth' })"
+    onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); document.querySelector('#projects, #about, main > section:nth-child(2)')?.scrollIntoView({ behavior: 'smooth' }); }"
   >
-    <span class="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-2 opacity-70 group-hover:opacity-100 transition-opacity duration-300">Zobacz projekty</span>
-    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 dark:bg-slate-800/20 backdrop-blur-sm border border-white/30 dark:border-slate-600/30 group-hover:bg-white/30 dark:group-hover:bg-slate-700/30 group-hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50">
+    <span class="text-xs md:text-sm text-gray-500 mb-2 opacity-70 group-hover:opacity-100 transition-opacity duration-300 font-medium">Zobacz projekty</span>
+    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm border border-white/40 group-hover:bg-white/40 group-hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400/50 shadow-lg">
       <svg 
-        class="animate-bounce-slow text-blue-500 dark:text-blue-400 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors duration-300" 
-        width="24" 
-        height="24" 
+        class="animate-bounce-slow text-blue-600 group-hover:text-blue-700 transition-colors duration-300" 
+        width="20" 
+        height="20" 
         viewBox="0 0 24 24" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <path d="M12 5v14M12 19l-6-6M12 19l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 5v14M12 19l-6-6M12 19l6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </div>
@@ -304,6 +326,126 @@ import logo from "../assets/astro.svg";
   }
 }
 
+/* New advanced button animations */
+@keyframes button-shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+  }
+}
+
+@keyframes button-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.4),
+      0 0 40px rgba(147, 51, 234, 0.2),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(59, 130, 246, 0.8),
+      0 0 80px rgba(147, 51, 234, 0.4),
+      inset 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes slide-in-elastic {
+  0% {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(10%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* New micro-interactions */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #3b82f6;
+  }
+}
+
+@keyframes slide-in-bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* New shimmer effect for loading states */
 @keyframes shimmer {
   0% {
@@ -312,6 +454,42 @@ import logo from "../assets/astro.svg";
   100% {
     transform: translateX(100%);
   }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.animate-typing {
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.animate-slide-in-bounce {
+  animation: slide-in-bounce 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+.animate-button-pulse {
+  animation: button-pulse 2s infinite;
+}
+
+.animate-button-shimmer {
+  animation: button-shimmer 2s infinite;
+}
+
+.animate-ripple {
+  animation: ripple 0.6s linear;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-slide-in-elastic {
+  animation: slide-in-elastic 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s infinite;
 }
 
 /* New slide-in-from-left animation */
@@ -326,6 +504,31 @@ import logo from "../assets/astro.svg";
   }
 }
 
+/* Enhanced centering utilities */
+.perfect-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Interactive hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
 /* New slide-in-from-right animation */
 @keyframes slide-in-right {
   from {
@@ -336,11 +539,6 @@ import logo from "../assets/astro.svg";
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-/* Enhanced animation classes */
-.animate-fade-in { 
-  animation: fade-in 1s ease-out forwards; 
 }
 
 .animate-slide-up { 
@@ -468,11 +666,6 @@ import logo from "../assets/astro.svg";
 }
 
 /* Dark mode optimizations */
-@media (prefers-color-scheme: dark) {
-  .bg-gradient-to-br {
-    background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
-  }
-}
 
 /* Enhanced responsive improvements */
 @media (max-width: 768px) {
@@ -482,7 +675,7 @@ import logo from "../assets/astro.svg";
   
   .hero-section {
     padding-top: 1.5rem !important;
-    min-height: 100vh !important;
+    height: 100vh !important;
   }
   
   h1 {
@@ -496,11 +689,11 @@ import logo from "../assets/astro.svg";
   }
   
   .gap-8 {
-    gap: 1.5rem !important;
+    gap: 2rem !important;
   }
   
   .space-y-8 > * + * {
-    margin-top: 1.5rem !important;
+    margin-top: 2rem !important;
   }
   
   .px-8 {
@@ -512,11 +705,17 @@ import logo from "../assets/astro.svg";
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
   }
+  
+  /* Better centering on mobile */
+  .flex-col-reverse {
+    justify-content: center !important;
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-section .absolute.left-1\/2 {
-    bottom: 1rem !important;
+    bottom: 1.5rem !important;
   }
   
   h1 {
@@ -528,12 +727,20 @@ import logo from "../assets/astro.svg";
   }
   
   .gap-4 {
-    gap: 0.75rem !important;
+    gap: 1rem !important;
   }
   
   .px-8 {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
+  }
+  
+  /* Perfect centering on small screens */
+  .h-full {
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 }
 
