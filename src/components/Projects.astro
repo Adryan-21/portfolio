@@ -2,28 +2,19 @@
 // Portfolio/Projects section component
 ---
 
-<section id="projects" class="relative py-20 bg-gradient-to-br from-gray-50 via-slate-100 to-blue-50 overflow-hidden">
-  <!-- Background decoration -->
-  <div class="absolute inset-0">
-    <!-- Animated gradient orbs -->
-    <div class="absolute top-20 right-10 w-80 h-80 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob opacity-30"></div>
-    <div class="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000 opacity-25"></div>
-    <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-indigo-400 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000 opacity-25"></div>
-    
-    <!-- Geometric patterns -->
-    <div class="absolute top-32 right-1/4 w-24 h-24 opacity-20">
-      <div class="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-600 transform rotate-45 rounded-lg animate-float-slow"></div>
-    </div>
-    <div class="absolute bottom-32 left-1/4 w-20 h-20 opacity-20">
-      <div class="w-full h-full bg-gradient-to-br from-purple-500 to-pink-600 rounded-full animate-pulse-gentle animation-delay-2000"></div>
-    </div>
+<section id="projects" class="relative py-20 bg-gradient-to-bl from-purple-100 via-indigo-50 to-blue-50 overflow-hidden">
+  <!-- Enhanced background decoration with better performance -->
+  <div class="absolute inset-0 opacity-5 hidden md:block will-change-transform">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+    <div class="absolute top-40 right-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-3 left-20 w-72 h-72 bg-gradient-to-r from-indigo-400 to-indigo-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
   </div>
 
   <div class="relative max-w-7xl mx-auto px-6">
     <!-- Section Header -->
     <div class="text-center mb-16 animate-fade-in">
       <!-- Badge -->
-      <div class="inline-flex items-center px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-blue-200 shadow-sm mb-6">
+      <div class="inline-flex items-center px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-blue-200/50 shadow-lg mb-6">
         <svg class="w-4 h-4 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
         </svg>
@@ -49,7 +40,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
       
       <!-- Project Card 1 - Featured -->
-      <div class="lg:col-span-2 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-white/50">
+      <div class="lg:col-span-2 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-white/50 hover-lift transform">
         <div class="relative h-64 md:h-80 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 flex items-center justify-center overflow-hidden">
           <!-- Project preview mockup -->
           <div class="absolute inset-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/30 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
@@ -118,18 +109,24 @@
             <span class="px-4 py-2 bg-orange-100 text-orange-800 text-sm font-semibold rounded-full">PostgreSQL</span>
           </div>
           <div class="flex gap-4">
-            <a href="#" class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-3 px-6 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              🔗 Zobacz Live Demo
+            <a href="#" class="group flex-1 relative inline-flex items-center justify-center bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white text-center py-3 px-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] font-semibold overflow-hidden hover-lift transform">
+              <!-- Shimmer effect -->
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 ease-out skew-x-12"></div>
+              <span class="relative z-10">🔗 Zobacz Live Demo</span>
             </a>
-            <a href="#" class="flex-1 border-2 border-gray-300 text-gray-700 text-center py-3 px-6 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 font-semibold">
-              📋 Case Study
+            <a href="#" class="group flex-1 relative inline-flex items-center justify-center bg-white/95 backdrop-blur-lg text-gray-800 text-center py-3 px-6 rounded-xl border-2 border-gray-200/80 shadow-xl hover:shadow-2xl hover:bg-white transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] font-semibold overflow-hidden hover-lift transform">
+              <!-- Gradient border effect -->
+              <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+                <div class="w-full h-full bg-white rounded-xl"></div>
+              </div>
+              <span class="relative z-10">📋 Case Study</span>
             </a>
           </div>
         </div>
       </div>
 
       <!-- Project Card 2 -->
-      <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden group border border-white/50">
+      <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-white/50 hover-lift transform">
         <div class="relative h-56 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center overflow-hidden">
           <div class="absolute inset-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/30 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
             <div class="text-white text-center">
@@ -171,18 +168,22 @@
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">TypeScript</span>
           </div>
           <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-center py-2.5 px-4 rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-sm font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-              🔗 Demo
+            <a href="#" class="group flex-1 relative inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-center py-2.5 px-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] text-sm font-semibold overflow-hidden hover-lift transform">
+              <div class="absolute inset-0 bg-gradient-to-r from-emerald-700 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span class="relative z-10">🔗 Demo</span>
             </a>
-            <a href="#" class="flex-1 border-2 border-gray-300 text-gray-700 text-center py-2.5 px-4 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 text-sm font-semibold">
-              📝 Study
+            <a href="#" class="group flex-1 relative inline-flex items-center justify-center bg-white/95 backdrop-blur-lg text-gray-800 text-center py-2.5 px-4 rounded-lg border-2 border-gray-200/80 shadow-xl hover:shadow-2xl hover:bg-white transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] text-sm font-semibold overflow-hidden hover-lift transform">
+              <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+                <div class="w-full h-full bg-white rounded-lg"></div>
+              </div>
+              <span class="relative z-10">📝 Study</span>
             </a>
           </div>
         </div>
       </div>
 
       <!-- Project Card 3 -->
-      <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden group border border-white/50">
+      <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-white/50 hover-lift transform">
         <div class="relative h-56 bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center overflow-hidden">
           <div class="absolute inset-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/30 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
             <div class="text-white text-center">
@@ -224,11 +225,15 @@
             <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">Node.js</span>
           </div>
           <div class="flex gap-3">
-            <a href="#" class="flex-1 bg-gradient-to-r from-rose-600 to-pink-600 text-white text-center py-2.5 px-4 rounded-lg hover:from-rose-700 hover:to-pink-700 transition-all duration-300 text-sm font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-              🔗 Demo
+            <a href="#" class="group flex-1 relative inline-flex items-center justify-center bg-gradient-to-r from-rose-600 to-pink-600 text-white text-center py-2.5 px-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] text-sm font-semibold overflow-hidden hover-lift transform">
+              <div class="absolute inset-0 bg-gradient-to-r from-rose-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span class="relative z-10">🔗 Demo</span>
             </a>
-            <a href="#" class="flex-1 border-2 border-gray-300 text-gray-700 text-center py-2.5 px-4 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 text-sm font-semibold">
-              📝 Study
+            <a href="#" class="group flex-1 relative inline-flex items-center justify-center bg-white/95 backdrop-blur-lg text-gray-800 text-center py-2.5 px-4 rounded-lg border-2 border-gray-200/80 shadow-xl hover:shadow-2xl hover:bg-white transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] text-sm font-semibold overflow-hidden hover-lift transform">
+              <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-rose-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+                <div class="w-full h-full bg-white rounded-lg"></div>
+              </div>
+              <span class="relative z-10">📝 Study</span>
             </a>
           </div>
         </div>
@@ -241,8 +246,8 @@
       <h3 class="text-2xl font-bold text-gray-900 mb-4">Inne realizacje</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Mini project 1 -->
-        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 hover:shadow-lg transition-all duration-300 group">
-          <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover-lift transform">
+          <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
@@ -256,8 +261,8 @@
         </div>
         
         <!-- Mini project 2 -->
-        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 hover:shadow-lg transition-all duration-300 group">
-          <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover-lift transform">
+          <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM7.5 13.5c0-1.25.75-2.25 1.75-2.25S11 12.25 11 13.5 10.25 15.75 9.25 15.75 7.5 14.75 7.5 13.5z"/>
             </svg>
@@ -271,8 +276,8 @@
         </div>
         
         <!-- Mini project 3 -->
-        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 hover:shadow-lg transition-all duration-300 group">
-          <div class="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover-lift transform">
+          <div class="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
             </svg>
@@ -317,7 +322,7 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <a href="#contact" class="group relative inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-black rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-400/50 text-lg overflow-hidden transform">
+          <a href="#contact" class="group relative inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-black rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-400/50 text-lg overflow-hidden hover-lift transform">
             <!-- Animated background -->
             <div class="absolute inset-0 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -346,7 +351,7 @@
             </div>
           </a>
           
-          <a href="#services" class="group relative inline-flex items-center justify-center px-10 py-5 bg-white/90 border-2 border-gray-300 text-gray-700 font-bold rounded-2xl hover:bg-white hover:border-indigo-400 transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-gray-400/50 text-lg shadow-lg hover:shadow-xl backdrop-blur-sm overflow-hidden">
+          <a href="#services" class="group relative inline-flex items-center justify-center px-10 py-5 bg-white/95 backdrop-blur-lg border-2 border-gray-200/80 text-gray-800 font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-gray-400/50 text-lg overflow-hidden hover-lift transform">
             <!-- Gradient border effect on hover -->
             <div class="absolute inset-0 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5 rounded-2xl">
               <div class="w-full h-full bg-white rounded-2xl"></div>
@@ -380,8 +385,10 @@
 </section>
 
 <style>
+  /* Enhanced keyframe animations with performance optimizations */
   .animate-blob {
     animation: blob 7s infinite;
+    will-change: transform, border-radius;
   }
   
   .animation-delay-2000 {
@@ -392,37 +399,105 @@
     animation-delay: 4s;
   }
   
-  .animate-float-slow {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-pulse-gentle {
-    animation: pulse-gentle 4s ease-in-out infinite;
-  }
-  
   .animate-fade-in {
     animation: fadeIn 1s ease-out;
   }
   
+  /* Interactive hover effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
   @keyframes blob {
-    0% { transform: translate(0px, 0px) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-    100% { transform: translate(0px, 0px) scale(1); }
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-  }
-  
-  @keyframes pulse-gentle {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.05); }
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+      border-radius: 70% 30% 40% 60% / 40% 70% 60% 50%;
+    }
   }
   
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  /* Enhanced backdrop blur utilities */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+  }
+
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-blob,
+    .animate-fade-in {
+      animation: none !important;
+    }
+    
+    * {
+      transition: none !important;
+    }
+  }
+
+  /* Performance hint for animations */
+  .animate-blob {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Enhanced focus management */
+  .focus\:ring-4:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+  /* Enhanced responsive improvements */
+  @media (max-width: 768px) {
+    .animate-blob {
+      display: none;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .animate-blob,
+    .shadow-lg,
+    .shadow-xl,
+    .shadow-2xl {
+      box-shadow: none !important;
+    }
+  }
+
+  /* Smooth scroll enhancement */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
