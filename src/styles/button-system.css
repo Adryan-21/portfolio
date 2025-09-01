@@ -1,0 +1,365 @@
+/* 
+ * Unified Button System for Portfolio
+ * Modern, accessible, and consistent button design language
+ */
+
+:root {
+  /* Primary Button Variables */
+  --btn-primary-bg: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  --btn-primary-hover-bg: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+  --btn-primary-shadow: 0 4px 15px rgba(59, 130, 246, 0.2), 0 2px 8px rgba(99, 102, 241, 0.1);
+  --btn-primary-hover-shadow: 0 8px 25px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(99, 102, 241, 0.15);
+  
+  /* Secondary Button Variables */
+  --btn-secondary-bg: rgba(255, 255, 255, 0.8);
+  --btn-secondary-border: rgba(255, 255, 255, 0.2);
+  --btn-secondary-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --btn-secondary-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  /* System Colors */
+  --color-blue: #3b82f6;
+  --color-emerald: #059669;
+  --color-purple: #9333ea;
+  --color-gray: #6b7280;
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-quick: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Button Styles */
+.btn-base {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Primary Button (CTA) */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--btn-primary-bg);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  box-shadow: 
+    var(--btn-primary-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--btn-primary-hover-bg);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    var(--btn-primary-hover-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(1.01);
+  transition: var(--transition-quick);
+}
+
+.btn-primary:focus-visible {
+  box-shadow: 
+    var(--btn-primary-shadow),
+    0 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Secondary Button (System) */
+.btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--btn-secondary-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--color-gray);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.875rem;
+  font-size: 0.875rem;
+  box-shadow: 
+    var(--btn-secondary-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    var(--btn-secondary-hover-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  transition: var(--transition-quick);
+}
+
+.btn-secondary:focus-visible {
+  box-shadow: 
+    var(--btn-secondary-shadow),
+    0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  border-radius: 0.625rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  border-radius: 1.25rem;
+}
+
+.btn-xl {
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  border-radius: 1.5rem;
+}
+
+/* Button Icons */
+.btn-icon-left {
+  margin-right: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.btn-icon-right {
+  margin-left: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary:hover .btn-icon-left,
+.btn-secondary:hover .btn-icon-left {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.btn-primary:hover .btn-icon-right,
+.btn-secondary:hover .btn-icon-right {
+  transform: scale(1.1) translateX(2px);
+}
+
+/* Button Variants */
+.btn-blue {
+  --btn-color: var(--color-blue);
+  color: var(--btn-color);
+}
+
+.btn-blue:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+}
+
+.btn-emerald {
+  --btn-color: var(--color-emerald);
+  color: var(--btn-color);
+}
+
+.btn-emerald:hover {
+  background: rgba(5, 150, 105, 0.1);
+  color: #047857;
+}
+
+.btn-purple {
+  --btn-color: var(--color-purple);
+  color: var(--btn-color);
+}
+
+.btn-purple:hover {
+  background: rgba(147, 51, 234, 0.1);
+  color: #7c2d92;
+}
+
+/* Button States */
+.btn-loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.btn-disabled,
+.btn-base:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Special Effects */
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-shimmer:hover::before {
+  left: 100%;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: inherit;
+  border-radius: inherit;
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.btn-glow:hover::after {
+  opacity: 0.3;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.btn-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  
+  .btn-lg,
+  .btn-xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .btn-base,
+  .btn-primary,
+  .btn-secondary {
+    transition: none;
+    transform: none !important;
+  }
+  
+  .btn-shimmer::before {
+    display: none;
+  }
+  
+  .btn-pulse-glow {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .btn-primary {
+    background: #000;
+    border: 2px solid #fff;
+  }
+  
+  .btn-secondary {
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .btn-secondary {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #e5e7eb;
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .btn-base {
+    box-shadow: none !important;
+    transform: none !important;
+    background: transparent !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+  }
+}
