@@ -8,11 +8,12 @@
       
       <!-- Logo with enhanced accessibility -->
       <a href="#hero" class="flex items-center group transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-2 -m-2" aria-label="Przejdź do strony głównej" role="banner">
-        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200">
-          <span class="text-white font-bold text-base" aria-hidden="true">AD</span>
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 via-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mr-3 shadow-lg group-hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="text-white font-bold text-base relative z-10 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">AD</span>
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-gray-900 text-lg group-hover:text-blue-600 transition-colors duration-200">Adrian</span>
+          <span class="font-bold text-gray-900 text-lg group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">Adrian</span>
           <span class="text-xs text-gray-600 font-medium group-hover:text-blue-500 transition-colors duration-200">Frontend Developer</span>
         </div>
         <!-- Subtelny wskaźnik stanu ładowania -->
@@ -24,15 +25,15 @@
         <!-- Progress indicator -->
         <div class="flex items-center mr-4" aria-hidden="true">
           <div class="w-16 h-1 bg-gray-200 rounded-full overflow-hidden">
-            <div id="scroll-progress" class="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-300 w-0"></div>
+            <div id="scroll-progress" class="h-full bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 rounded-full transition-all duration-300 w-0"></div>
           </div>
         </div>
 
-        <a href="#about" class="nav-link group px-4 py-2.5 rounded-xl text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100/50 font-medium transition-all duration-300 flex items-center gap-2 relative overflow-hidden btn-system" aria-label="Przejdź do sekcji O mnie" role="menuitem" data-section="about">
+        <a href="#about" class="nav-link group px-4 py-2.5 rounded-xl text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 font-medium transition-all duration-300 flex items-center gap-2 relative overflow-hidden btn-system" aria-label="Przejdź do sekcji O mnie" role="menuitem" data-section="about">
           <!-- Button shine effect -->
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
           
-          <div class="w-4 h-4 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 group-hover:from-blue-200 group-hover:to-blue-300 flex items-center justify-center transition-all duration-300 shadow-sm group-hover:shadow-md">
+          <div class="w-4 h-4 rounded-lg bg-gradient-to-br from-blue-100 via-cyan-100 to-blue-200 group-hover:from-blue-200 group-hover:via-cyan-200 group-hover:to-blue-300 flex items-center justify-center transition-all duration-300 shadow-sm group-hover:shadow-md">
             <svg class="w-2.5 h-2.5 text-blue-600 transition-all duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>
@@ -54,11 +55,11 @@
           <span class="sr-only">Zobacz jakie usługi oferuję</span>
         </a>
         
-        <a href="#projects" class="nav-link group px-4 py-2.5 rounded-xl text-gray-700 hover:text-purple-600 hover:bg-gradient-to-r hover:from-purple-50 hover:to-purple-100/50 font-medium transition-all duration-300 flex items-center gap-2 relative overflow-hidden btn-system" aria-label="Przejdź do sekcji Portfolio" role="menuitem" data-section="projects">
+        <a href="#projects" class="nav-link group px-4 py-2.5 rounded-xl text-gray-700 hover:text-purple-600 hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 font-medium transition-all duration-300 flex items-center gap-2 relative overflow-hidden btn-system" aria-label="Przejdź do sekcji Portfolio" role="menuitem" data-section="projects">
           <!-- Button shine effect -->
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
           
-          <div class="w-4 h-4 rounded-lg bg-gradient-to-br from-purple-100 to-purple-200 group-hover:from-purple-200 group-hover:to-purple-300 flex items-center justify-center transition-all duration-300 shadow-sm group-hover:shadow-md">
+          <div class="w-4 h-4 rounded-lg bg-gradient-to-br from-purple-100 via-indigo-100 to-purple-200 group-hover:from-purple-200 group-hover:via-indigo-200 group-hover:to-purple-300 flex items-center justify-center transition-all duration-300 shadow-sm group-hover:shadow-md">
             <svg class="w-2.5 h-2.5 text-purple-600 transition-all duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2H5a2 2 0 00-2 2v2M7 7h10"/>
             </svg>
@@ -70,13 +71,16 @@
         <!-- Separator -->
         <div class="h-6 w-px bg-gray-300 mx-3"></div>
         
-        <!-- Simplified CTA Button -->
-        <a href="#contact" class="btn-primary group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 flex items-center gap-2" aria-label="Rozpocznij współpracę" role="menuitem">
-          <!-- Simple hover overlay -->
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+        <!-- Enhanced CTA Button -->
+        <a href="#contact" class="btn-primary group relative bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 flex items-center gap-2 overflow-hidden" aria-label="Rozpocznij współpracę" role="menuitem">
+          <!-- Enhanced hover overlay with glow -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+          
+          <!-- Shimmer effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 ease-out skew-x-12"></div>
           
           <div class="relative z-10 flex items-center gap-2">
-            <svg class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
             </svg>
             <span>Kontakt</span>
@@ -107,11 +111,11 @@
     <div id="mobile-menu" class="lg:hidden hidden" role="menu" aria-labelledby="mobile-menu-button">
       <div class="absolute left-0 right-0 top-full bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg" role="presentation">
         <div class="px-4 py-6 space-y-3">
-          <a href="#about" class="mobile-nav-link btn-system px-4 py-3.5 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100/50 font-medium rounded-xl transition-all duration-300 flex items-center gap-3 relative overflow-hidden" aria-label="Przejdź do sekcji O mnie" role="menuitem" data-section="about">
+          <a href="#about" class="mobile-nav-link btn-system px-4 py-3.5 text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 font-medium rounded-xl transition-all duration-300 flex items-center gap-3 relative overflow-hidden" aria-label="Przejdź do sekcji O mnie" role="menuitem" data-section="about">
             <!-- Button shine effect -->
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
             
-            <div class="w-8 h-8 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center shadow-sm">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-100 via-cyan-100 to-blue-200 rounded-xl flex items-center justify-center shadow-sm">
               <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
               </svg>
@@ -147,11 +151,11 @@
             </div>
           </a>
           
-          <a href="#projects" class="mobile-nav-link btn-system px-4 py-3.5 text-gray-700 hover:text-purple-600 hover:bg-gradient-to-r hover:from-purple-50 hover:to-purple-100/50 font-medium rounded-xl transition-all duration-300 flex items-center gap-3 relative overflow-hidden" aria-label="Przejdź do sekcji Portfolio" role="menuitem" data-section="projects">
+          <a href="#projects" class="mobile-nav-link btn-system px-4 py-3.5 text-gray-700 hover:text-purple-600 hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 font-medium rounded-xl transition-all duration-300 flex items-center gap-3 relative overflow-hidden" aria-label="Przejdź do sekcji Portfolio" role="menuitem" data-section="projects">
             <!-- Button shine effect -->
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
             
-            <div class="w-8 h-8 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center shadow-sm">
+            <div class="w-8 h-8 bg-gradient-to-br from-purple-100 via-indigo-100 to-purple-200 rounded-xl flex items-center justify-center shadow-sm">
               <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2H5a2 2 0 00-2 2v2M7 7h10"/>
               </svg>
@@ -167,10 +171,10 @@
             </div>
           </a>
           
-          <!-- Simplified Mobile CTA -->
+          <!-- Enhanced Mobile CTA -->
           <div class="pt-4 mt-4 border-t border-gray-200">
-            <a href="#contact" class="btn-primary bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-3 relative overflow-hidden" aria-label="Rozpocznij współpracę" role="menuitem">
-              <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            <a href="#contact" class="btn-primary bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 text-white px-4 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-3 relative overflow-hidden" aria-label="Rozpocznij współpracę" role="menuitem">
+              <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
               
               <div class="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center relative z-10">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -204,17 +208,23 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
   }
 
-  /* Simplified Button System - Primary (CTA) */
+  /* Enhanced Button System - Primary (CTA) */
   .btn-primary {
     position: relative;
-    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 35%, #8b5cf6 100%);
+    box-shadow: 
+      0 2px 8px rgba(59, 130, 246, 0.2),
+      0 4px 16px rgba(6, 182, 212, 0.1),
+      0 1px 0 rgba(255, 255, 255, 0.2) inset;
     transition: all 0.3s ease;
   }
 
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 
+      0 4px 12px rgba(59, 130, 246, 0.3),
+      0 8px 24px rgba(6, 182, 212, 0.15),
+      0 1px 0 rgba(255, 255, 255, 0.3) inset;
   }
 
   .btn-primary:active {
@@ -235,11 +245,12 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* Simplified scroll progress indicator */
+  /* Enhanced scroll progress indicator */
   #scroll-progress {
-    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+    background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 50%, #8b5cf6 100%);
     transition: width 0.1s ease-out;
     border-radius: 2px;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
   }
 
   /* Simplified active states */
