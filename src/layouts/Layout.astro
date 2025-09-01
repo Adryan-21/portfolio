@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
+import ScrollToTop from "../components/ScrollToTop.astro";
 import "../styles/global.css";
 ---
 
@@ -20,6 +21,12 @@ import "../styles/global.css";
 			<slot />
 		</main>
 		<Footer />
+		<ScrollToTop 
+			threshold={400}
+			size="md"
+			position="bottom-right"
+			showProgress={true}
+		/>
 	</body>
 </html>
 
